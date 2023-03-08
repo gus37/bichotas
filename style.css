@@ -1,0 +1,302 @@
+/* FUENTES */
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Monoton&family=Tilt+Neon&family=Train+One&display=swap');
+
+/* atajos para usar las fuentes: 
+font-family: 'Bad Script', cursive;
+font-family: 'Monoton', cursive;
+font-family: 'Tilt Neon', cursive;
+font-family: 'Train One', cursive; */
+*{
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background-image: url(img/bkg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 40px;
+    background: linear-gradient(70deg,#ffffff 20%, #ff007f, #ffffff 70%, #ff00ff);
+    border-radius: 5px;
+    margin: 1% 5% 0.5%;
+    padding: 10px;
+    box-shadow: 0px 0px 30px #ffffff, 0px 0px 100px #ff00ff;
+}
+
+header h1{
+    font-family: 'Monoton', cursive;
+    color: white;
+    font-size: 40px;
+    text-shadow: 0px 0px 10px #ff00ff;
+    padding: 0px;
+    margin: 0px 30px;
+}
+
+.nav-menu ul{
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.nav-menu li{
+    padding: 5px;
+}
+
+.nav-menu li:hover{
+    filter: drop-shadow(0px 0px 10px #55007f);
+    transform: scale(1.1);
+}
+
+.nav-menu a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    background-color: rgba(255, 85, 255, 0.5);
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+.menu-icon img{
+    width: 50px;
+    height: 50px;
+}
+
+.menu-icon, #check{
+    display: none;
+}
+
+/*  banner */
+.audio-container{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    background-color: #ff007f;
+    height: 40px;
+    margin: 0 5%;
+}
+
+.audio-container p{
+    font-size: 18px;
+    color: white;
+    padding: 20px;
+}
+
+/* texto introductorio */
+
+.text-int p{
+    font-family: 'Tilt Neon', cursive;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    padding: 50px;
+    text-shadow: 0px 0px 10px #ff00ff;
+}
+
+.text-int span{
+    color: #ff00ff;
+}
+
+.imagenes-container{
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagenes-container .imagen{
+    position: relative;
+    margin-right: -70px;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+/* elevaciones */
+.imagenes-container .imagen:hover .nombre{
+    display: inline-block
+    }
+
+.imagenes-container .imagen img{
+    width: 200px;
+    height: 200px;
+    transition: transform 0.3s ease-in-out;
+    filter: drop-shadow(0px 0px 15px #ff00ff);
+}
+
+ /* individuales */
+.imagenes-container .imagen .b-g:hover  img{
+    transform: translateX(-30px);
+    filter: drop-shadow(0px 0px 55px #ff007f);
+}
+
+.imagenes-container .imagen .n-n:hover img{
+    transform: translateX(-30px);
+    filter: drop-shadow(0px 0px 55px #ff007f);
+}
+
+.imagenes-container .imagen .l-i:hover img{
+    transform: translateY(-30px);
+    filter: drop-shadow(0px 0px 55px #ff007f);
+}
+
+.imagenes-container .imagen .k-g:hover  img{
+    transform: translateX(+30px);
+    filter: drop-shadow(0px 0px 55px #ff007f);
+}
+
+.imagenes-container .imagen .r:hover img{
+    transform: translateX(+30px);
+    filter: drop-shadow(0px 0px 55px #ff007f);
+}
+
+/* efectos del hover */
+
+.imagenes-container .imagen .nombre{
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    color:#ff00ff;
+    display: none;
+    min-width: 100px;
+    width: 150px;
+    top: -80px; 
+    /* para que funcione y suba el nombre, tenemos que agregar la posicion absoluto, sino no funciona */
+    position: absolute;
+    left: calc(8px);
+    padding: 5px 15px;
+    filter: drop-shadow(0px 0px 20px #ffffff);
+}
+
+.imagenes-container .imagen .nombre .text{
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    width: 150px;
+    font-family: 'Tilt Neon', cursive;
+    font-size: 30px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.imagenes-container .imagen .nombre::before {
+    /* hace la flecha hacia abajo */
+    content: "";
+    position: absolute;
+    width:  1px;
+    height: 1px;
+    left: 40%;
+    bottom: -20px;  
+    border-top: 10px solid #ff00ff;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+} 
+
+@media (max-width: 1256px) {
+    header{
+        flex-direction: column;
+    }
+
+    header h1{
+        text-align: center;
+        padding: 10px;
+    }
+
+    .nav-menu li{
+        padding: 20px 5px;
+    }
+
+    .menu-icon{
+        display: block;
+        position: fixed;
+        top: 35px;
+        right: 80px;
+    }
+
+    .nav-menu ul {
+        display: block;
+        position: fixed;
+        top: 115px;
+        left: -100%;
+        background: linear-gradient(70deg,rgba(255, 0, 127, 0.8), rgba(255, 255, 255, 0.8) 70%, rgba(255, 85, 255, 0.5)) ;
+        width: 100%;
+        min-height: 100vh;
+        right: 0px;
+    }
+
+    .nav-menu li{
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        margin: 0px;
+    }
+
+    .checkbtn{
+        display: block;
+    }
+
+    #check:checked ~ ul{
+        left: 0px;
+    }
+
+    .audio-container{
+        flex-direction: column;
+        height: 130px;
+    }
+
+    .audio-container p{
+        padding: 5px;
+    }  
+
+    .imagenes-container{
+        flex-direction: column;
+        height: 150vh;
+    }
+
+    .imagenes-container .imagen{
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    margin-right: 0px;
+    padding: 20px;
+    }
+
+    .imagenes-container .imagen .nombre{
+        left: calc(28px);
+    }
+
+    /* elevaciones individuales */
+
+    .imagenes-container .imagen .b-g:hover  img{
+        transform: translateY(-30px);
+    }
+    
+    .imagenes-container .imagen .n-n:hover img{
+        transform: translateY(-30px);
+    }
+    
+    .imagenes-container .imagen .l-i:hover img{
+        transform: translateY(-30px);
+    }
+    
+    .imagenes-container .imagen .k-g:hover  img{
+        transform: translateY(-30px);
+    }
+    
+    .imagenes-container .imagen .r:hover img{
+        transform: translateY(-30px);
+    }
+}
+
+
