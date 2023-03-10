@@ -136,6 +136,94 @@ header h1{
     color: #ff00ff;
 }
 
+/* bios de las bichotas */
+.bio{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 28vh 5%;
+    border: 2px solid orange;
+}
+
+.bio img{
+    width: 250px;
+    height: 250px;
+    border-radius: 5px;
+    filter: drop-shadow(0px 0px 15px #ff00ff);
+    border: #ff00ff 2px solid;
+    margin-left: 15px;
+}
+
+.bio p{
+    font-family: 'Tilt Neon', cursive;
+    font-size: 30px;
+    text-align: justify;
+    color: white;
+    padding: 20px;
+    text-shadow: 0px 0px 10px #ff00ff;
+}
+
+.bio p a{
+    color: #ffffff;
+    text-shadow: 0px 0px 10px #ff00ff;
+    filter: drop-shadow(0px 0px 15px #ff00ff);
+}
+
+.bio p a:hover{
+    color: #ff00ff;
+    transition: 0.5s;
+}
+
+.bio span{
+    color: #ff00ff;
+    text-shadow: 0px 0px 15px aqua;
+    filter: drop-shadow(0px 0px 15px #ff00ff);
+}
+
+/* videos */
+.videos-container{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: auto;
+    margin: 60vh 5%;
+    border: 2px solid orange;
+}
+
+.videos-container h2{
+    font-family: 'Tilt Neon', cursive;
+    font-size: 30px;
+    text-align: justify;
+    margin: 50px;
+    color: white;
+    padding: 5px;
+    text-shadow: 0px 0px 15px #ff00ff;
+    filter: drop-shadow(0px 0px 15px #ff00ff);
+}
+.videos-container h3{
+    font-family: 'Tilt Neon', cursive;
+    font-size: 25px;
+    text-align: justify;
+    margin-top: 30px;
+    color: white;
+    /* padding: 5px; */
+    text-shadow: 0px 0px 15px #ff00ff;
+    filter: drop-shadow(0px 0px 15px #ff00ff);
+}
+
+.videos-container video{
+    max-width: 50%;
+    margin: 50px 0px;
+    border-radius: 20px;
+    border: #ff00ff 2px solid;
+    filter: drop-shadow(0px 0px 15px #ff00ff);
+}
+
+
 /* imagenes flotantes */
 .imagenes-container{
     position: absolute;
@@ -291,6 +379,15 @@ header h1{
         top: 10vh;
     }
 
+    .bio{
+        flex-direction: column;
+        margin: 32vh 5%;
+    }
+
+    .videos-container{
+        margin: 100vh 5%;
+    }
+    
     .imagenes-container{
         flex-direction: column;
         justify-content: center;
@@ -332,7 +429,7 @@ header h1{
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 840px) {
 
     header h1{
         font-size: 30px;
@@ -361,10 +458,25 @@ header h1{
         font-size: 30px;
     }
 
+    .bio{
+        margin: 35vh 5%;
+    }
+
+    .bio img{
+        width: 150px;
+        height: 150px;
+    }
+    .bio p{
+        font-size: 20px;
+    }
+    .videos-container{
+        margin: 90vh 5%;
+    }
+
     .imagenes-container{
         
         height: 150vh;
-        top: 20vh;
+        top: 0vh;
         left: 2vh;       
     }    
 }
@@ -375,10 +487,27 @@ header h1{
         right: 3vh;
     }
 
+    .bio{
+        margin: 40vh 5%;
+    }
+
+    .bio img{
+        width: 150px;
+        height: 150px;
+    }
+    .bio p{
+        font-size: 20px;
+    }
+    .videos-container{
+        margin: 140vh 5%;
+    }
+    .videos-container h2{
+        font-size: 25px;
+    }
     .imagenes-container{
         
         height: 150vh;
-        top: 20vh;
+        top: 0vh;
         left: -4vh;       
     }    
 }
