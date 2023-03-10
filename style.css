@@ -21,17 +21,26 @@ body{
     background-attachment: fixed;
 }
 
+.header{
+    width: 90%;
+    height: 100px;
+    margin: 5vh 5%;
+    position: fixed;
+    /* border: 2px solid orange; */
+    z-index: 4
+}
+
 header{
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 40px;
     background: linear-gradient(70deg,#ffffff 20%, #ff007f, #ffffff 70%, #ff00ff);
     border-radius: 5px;
-    margin: 1% 5% 0.5%;
-    padding: 10px;
     box-shadow: 0px 0px 30px #ffffff, 0px 0px 100px #ff00ff;
+    padding: 0px 20px;    
 }
+
 
 header h1{
     font-family: 'Monoton', cursive;
@@ -45,7 +54,7 @@ header h1{
 .nav-menu ul{
     display: flex;
     align-items: center;
-    z-index: 1;
+    z-index: 5;
 }
 
 .nav-menu li{
@@ -77,22 +86,42 @@ header h1{
 }
 
 /*  banner */
-.audio-container{
+.audio-fix{    
+    position: fixed;
+    width: 90%;
+    height: 80px;
+    background-color: #ff007f;
+    margin: 17vh 5%;
+    z-index: 3;
+}
+ 
+.audio-flex{
+    height: 100%;
     display: flex;
-    justify-content: right;
+    justify-content: end;
     align-items: center;
     background-color: #ff007f;
-    height: 40px;
-    margin: 0 5%;
+    /* border: 2px solid orangered; */
 }
-
-.audio-container p{
-    font-size: 18px;
+.audio-flex p{
+    font-size: 30px;
     color: white;
     padding: 20px;
 }
 
+
+
 /* texto introductorio */
+
+.text-int{
+    position: absolute;
+    display: block;
+    width: 90%;
+    height: auto;
+    z-index: 2;
+    margin: 28vh 5%;
+    /* border: 2px solid orange; */
+} 
 
 .text-int p{
     font-family: 'Tilt Neon', cursive;
@@ -107,11 +136,14 @@ header h1{
     color: #ff00ff;
 }
 
+/* imagenes flotantes */
 .imagenes-container{
-    height: 50vh;
+    position: absolute;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    height: auto;
+    z-index: 1;
+    /* border: 2px solid orange; */
+    margin: 70vh 30%;
 }
 
 .imagenes-container .imagen{
@@ -203,11 +235,7 @@ header h1{
     border-bottom: 10px solid transparent;
 } 
 
-@media (max-width: 1256px) {
-    header{
-        flex-direction: column;
-    }
-
+@media (max-width: 1305px) {
     header h1{
         text-align: center;
         padding: 10px;
@@ -220,23 +248,22 @@ header h1{
     .menu-icon{
         display: block;
         position: fixed;
-        top: 35px;
-        right: 80px;
+        top: 8vh;
+        right: 10vh;
     }
 
     .nav-menu ul {
         display: block;
         position: fixed;
-        top: 115px;
+        top: 16vh;
         left: -100%;
         background: linear-gradient(70deg,rgba(255, 0, 127, 0.8), rgba(255, 255, 255, 0.8) 70%, rgba(255, 85, 255, 0.5)) ;
         width: 100%;
-        min-height: 100vh;
         right: 0px;
     }
 
     .nav-menu li{
-        padding: 2rem;
+        padding: 0.5rem;
         display: flex;
         justify-content: center;
         margin: 0px;
@@ -250,26 +277,32 @@ header h1{
         left: 0px;
     }
 
-    .audio-container{
-        flex-direction: column;
+    .audio-flex{
+        justify-content: center;
+        align-items: center;
         height: 130px;
-    }
+    } 
 
     .audio-container p{
         padding: 5px;
     }  
 
+    .text-int{
+        top: 10vh;
+    }
+
     .imagenes-container{
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
         height: 150vh;
+        left: 10vh;
+        top: 20vh;
     }
 
     .imagenes-container .imagen{
-    position: relative;
-    display: inline-flex;
-    flex-direction: column;
-    margin-right: 0px;
-    padding: 20px;
+        padding: 20px;
     }
 
     .imagenes-container .imagen .nombre{
@@ -299,4 +332,53 @@ header h1{
     }
 }
 
+@media (max-width: 600px) {
 
+    header h1{
+        font-size: 30px;
+    } 
+
+    .menu-icon{
+        /* display: block;
+        position: fixed;
+        top: 8vh; */
+        right: 5vh;
+    }
+
+    .audio-flex{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 130px;
+    } 
+
+    .audio-flex p{
+        font-size: 20px;
+        padding: 5px;
+    }  
+
+    .text-int p{
+        font-size: 30px;
+    }
+
+    .imagenes-container{
+        
+        height: 150vh;
+        top: 20vh;
+        left: 2vh;       
+    }    
+}
+
+@media (max-width: 360px) {
+
+    .menu-icon{
+        right: 3vh;
+    }
+
+    .imagenes-container{
+        
+        height: 150vh;
+        top: 20vh;
+        left: -4vh;       
+    }    
+}
